@@ -2,21 +2,20 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 let objects_array = [];
-let grammah, unique_input, unique_message, employyee_type = '';
-
 
 function compile_objects(run_type){
+  let grammah, unique_input, unique_message = '';
+
   if (run_type === "Start"){
-    grammah = "your";
+    grammah = "your"
     unique_input = "office_number";
-    unique_message = `Enter ${grammah} Office Number`;
   }else{
-    if(run_type === "Add an Engineer") employyee_type = "Engineer";
-    if(run_type === "Add an Intern") employyee_type = "Intern";
     grammah = "their";
-    unique_input = employyee_type;
-    unique_message = `Enter ${grammah} Employee Type`;
+    if(run_type === "Add an Engineer") unique_input = "gitHub_username";
+    if(run_type === "Add an Intern") unique_input = "school";
   }
+  
+  unique_message = `Enter ${grammah} ${unique_input.replace("_", " ")}`;
 
   inquirer
     .prompt([
