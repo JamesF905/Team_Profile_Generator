@@ -2,6 +2,8 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 let objects_array = [];
+let grammah, unique_input, unique_message, employyee_type = '';
+
 
 function compile_objects(run_type){
   if (run_type === "Start"){
@@ -9,9 +11,11 @@ function compile_objects(run_type){
     unique_input = "office_number";
     unique_message = `Enter ${grammah} Office Number`;
   }else{
+    if(run_type === "Add an Engineer") employyee_type = "Engineer";
+    if(run_type === "Add an Intern") employyee_type = "Intern";
     grammah = "their";
-    unique_input = "employyee type";
-    unique_message = `Enter ${grammah} employee type`;
+    unique_input = employyee_type;
+    unique_message = `Enter ${grammah} Employee Type`;
   }
 
   inquirer
