@@ -2,7 +2,7 @@
 <div id="top"></div>
 <div align="center">
 <a href="https://gist.github.com/JamesF905">
-<img src="assets/images/logo.png" alt="Logo" width="40%" style="border: 4px inset #444; background:#333; border-radius: 20px">
+<img src="images/logo.png" alt="Logo" width="40%" style="border: 4px inset #444; background:#333; border-radius: 20px">
 </a>
 
 # Team_Profile_Generator
@@ -28,7 +28,7 @@
 
 ## About The Project
 
-[![Social Network][product-screenshot]](https://github.com/JamesF905/Team_Profile_Generator)
+[![Team_Profile_Generator][product-screenshot]](https://github.com/JamesF905/Team_Profile_Generator)
 
 This challenge requires me to create a social network app using node.js, NPM, mongoose, express, and a NoSQL database. The user story and acceptance criteria are as follows.
 
