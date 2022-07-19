@@ -1,9 +1,9 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-const Manager = require('lib/Manager.js');
-const Engineer = require('lib/Engineer.js');
-const Intern = require('lib/Intern.js');
+const Manager = require('./lib/Manager');
+const Engineer = require('./lib/Engineer');
+const Intern = require('./lib/Intern');
 
 let objects_array = [];
 
@@ -17,11 +17,11 @@ function compile_objects(run_type){
   }else{
     grammah = "their";
     if(run_type === "Add an Engineer") {
-      roll = "Engineer";
+      roll == "Engineer";
       unique_input = "GitHub_Username";
     }
     if(run_type === "Add an Intern"){
-      roll = "Intern";
+      roll == "Intern";
       unique_input = "School";
     }
   }
@@ -52,7 +52,13 @@ function compile_objects(run_type){
       },         
     ])
     .then((data) => {
-      objects_array.push(data);
+      let new_Obj = (
+        roll === "Manager" ? new Manager(data.name, data.employee_ID, data.email_address, Object.values(data)[3]):
+        roll === "Engineer" ? new Engineer(data.name, data.employee_ID, data.email_address, Object.values(data)[3]):
+        roll === "Intern" ? new Intern(data.name, data.employee_ID, data.email_address, Object.values(data)[3]):
+        null 
+        );
+      objects_array.push(new_Obj);
       inquirer.prompt({
         type: "list",
         name: "choice",
