@@ -1,68 +1,141 @@
-# Team Profile Generator
-# by_James_Fidlin
-
+<div style="background:#222; border: 4px outset #333; padding:20px; font-family:arial">
 <div id="top"></div>
-
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
-
-<br />
 <div align="center">
-  <a href="https://github.com/JamesF905/Team_Profile_Generator">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
+<a href="https://gist.github.com/JamesF905">
+<img src="assets/images/logo.png" alt="Logo" width="40%" style="border: 4px inset #444; background:#333; border-radius: 20px">
+</a>
 
-  <h3 align="center">Team Profile Generator</h3>
+# Team_Profile_Generator
 
-  <p align="center">
-    <a href="https://jamesf905.github.io/Team_Profile_Generator"><strong>https://jamesf905.github.io/Team_Profile_Generator</strong></a>
-    <br />
-    <br />
-    <a href="https://www.linkedin.com/in/james-fidlin-98853a239/">linkedin</a>
-    ·
-    <a href="www.gmail.com">Contact</a>
-  </p>
+<p align="center">
+  An application that generates an HTML file showing team members, based on my inputs. <br><br>By: <a href="https://github.com/JamesF905" target="_blank"><strong>James Fidlin</strong></a><br/>July, 19, 2022
+</p>
+<br />
+
+### Video Walkthrough Link
+
+<p align="center">
+    <a href="https://drive.google.com/file/d/1xe5Skd2xXaGKsBG44NHPMJ-8sfBz9IVe/view"><strong>https://drive.google.com/file/d/1xe5Skd2xXaGKsBG44NHPMJ-8sfBz9IVe/view</strong></a>
+</p>
+
+### Repo Link
+
+<p align="center">
+    <a href="https://github.com/JamesF905/Team_Profile_Generator"><strong>https://github.com/JamesF905/Team_Profile_Generator</strong></a>
+</p>
+<br />
 </div>
 
 ## About The Project
 
-[![Team Profile Generator][product-screenshot]](https://jamesf905.github.io/Team_Profile_Generator)
+[![Social Network][product-screenshot]](https://github.com/JamesF905/Team_Profile_Generator)
 
-This module's challenge requires me to create the code that will run a daily work day planner. This code will rely heavily upon API's such as JQuery, Bootstrap, Momentjs, and Fontawesome. This planner uses local storage to store the daily tasks of the user, which can then be updated and/or removed. The current, past, and future hours have a different background colour to help guide the user.
+This challenge requires me to create a social network app using node.js, NPM, mongoose, express, and a NoSQL database. The user story and acceptance criteria are as follows.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+This application uses node.js (fs module) to generate an HTML file showing team members, based on what is selected in the NPM Inquirer prompts. NPM Jest is used to run testing (Test Driven Development), on the code to ensure it meets current industry standards. This challenge also demonstrates heavy use of javascript classes and their extentions. Further functionality is detailed in the user story, and acceptance criteria located below.
+<br /><br />
 
+## Contents
+* [User Story](#User-Story)
+* [Acceptance Criteria](#Acceptance-Criteria)
+* [Technology Used](#Technology-Used)
+* [Installation](#Installation-Instructions)
+* [About the Author](#About-the-Author)
+<br/><br/>
 
-### Built With
+## User Story
+
+```md
+AS A manager
+I WANT to generate a webpage that displays my team's basic info
+SO THAT I have quick access to their emails and GitHub profiles
+```
+
+## Acceptance Criteria
+
+```md
+GIVEN a command-line application that accepts user input
+
+WHEN I am prompted for my team members and their information
+THEN an HTML file is generated that displays a nicely formatted team roster based on user input
+
+WHEN I click on an email address in the HTML
+THEN my default email program opens and populates the TO field of the email with the address
+
+WHEN I click on the GitHub username
+THEN that GitHub profile opens in a new tab
+
+------------------------------------------------------------------------
+
+WHEN I start the application
+THEN I am prompted to enter the team manager’s name, employee ID, email address, and office number
+
+WHEN I enter the team manager’s name, employee ID, email address, and office number
+THEN I am presented with a menu with the option to add an engineer or an intern or to finish building my team
+
+WHEN I select the engineer option
+THEN I am prompted to enter the engineer’s name, ID, email, and GitHub username, and I am taken back to the menu
+
+WHEN I select the intern option
+THEN I am prompted to enter the intern’s name, ID, email, and school, and I am taken back to the menu
+
+WHEN I decide to finish building my team
+THEN I exit the application, and the HTML is generated
+```
+
+## Technology Used 
 
 * [Javascript](https://www.javascript.com/)
-* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
-* [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 * [Visual Studio Code](https://code.visualstudio.com/)
 * [Git Hub](https://github.com/)
 * [Git Bash](https://git-scm.com/)
-* [Bootstrap](https://getbootstrap.com/docs/3.3/)
-* [JQuery](https://git-scm.com/)
-* [Momentjs](https://momentjs.com/)
 * [Font Awesome](https://fontawesome.com/icons)
+* [node.js](https://nodejs.org/en/)
+* [node.js fs module](https://nodejs.dev/learn/the-nodejs-fs-module)
+* [npm inquirer](https://www.npmjs.com/package/inquirer)
+* [npm fs](https://www.npmjs.com/)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="center"><a href="#contents">(back to top)</a></p>
+<br/><br/>
+
+## Installation Instructions 
+
+1) Install GitBash
+
+2) Install Node.js
+
+3) Clone this repo
+
+4) Run GitBash from your cloned folder
+
+5) type "npm i" in GitBash
+
+6) type "node index.js" in GitBash to start the application
+
+<p align="center"><a href="#contents">(back to top)</a></p>
+<br/><br/>
+
+## About the Author
+
+James Fidlin is a Junior Full Stack Web Developer, studying at the University of Toronto's School for Continuing Education, in the Full Stack Web Development Program. You can connect with James, using any of the links below.
+<br/><br/>
+
+[![LinkedIn][linkedin-shield]][linkedin-url] [![Gmail][gmail-shield]][Gmail-url] [![Github][Github-shield]][Github-url]
+
+<br/>
+
+<p align="center"><a href="#contents">(back to top)</a></p>
+</div>
 
 
-## Contact
 
-James Fidlin - gmail.com
+[Gmail-shield]: https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white
+[Gmail-url]: mailto:jameslfidlin@gmail.com?
 
-Project Link: [https://github.com/JamesF905/Team_Profile_Generator](https://github.com/JamesF905/Team_Profile_Generator)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-shield]: https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white
 [linkedin-url]: https://www.linkedin.com/in/james-fidlin-98853a239/
-[product-screenshot]: images/Project_Screenshot.png
 
+[Github-shield]: https://img.shields.io/badge/Github-white?style=for-the-badge&logo=Github&logoColor=222
+[Github-url]: https://github.com/JamesF905
 
-
+[product-screenshot]: assets/images/Project_Screenshot.png

@@ -11,22 +11,22 @@ function compile_objects(run_type){
   let grammah, unique_input, unique_message, roll = '';
 
   if (run_type === "Start"){
+    grammah = "your";
     roll = "Manager";
-    grammah = "your"
-    unique_input = "Office_Number";
+    unique_input = "Office Number";
   }else{
     grammah = "their";
     if(run_type === "Add an Engineer") {
-      roll == "Engineer";
-      unique_input = "GitHub_Username";
+      roll = "Engineer";
+      unique_input = "GitHub Username";
     }
     if(run_type === "Add an Intern"){
-      roll == "Intern";
+      roll = "Intern";
       unique_input = "School";
     }
   }
   
-  unique_message = `Enter ${grammah} ${unique_input.replace("_", " ")}`;
+  unique_message = `Enter ${grammah} ${unique_input}`;
 
   inquirer
     .prompt([
@@ -47,17 +47,17 @@ function compile_objects(run_type){
       },
       {
         type: 'input',
-        name: `${unique_input}`,
+        name: 'unique',
         message: `${unique_message}`,
       },         
     ])
     .then((data) => {
       let new_Obj = (
-        roll === "Manager" ? new Manager(data.name, data.employee_ID, data.email_address, Object.values(data)[3]):
-        roll === "Engineer" ? new Engineer(data.name, data.employee_ID, data.email_address, Object.values(data)[3]):
-        roll === "Intern" ? new Intern(data.name, data.employee_ID, data.email_address, Object.values(data)[3]):
+        roll === "Manager" ? new Manager(data.name, data.employee_ID, data.email_address, data.unique):
+        roll === "Engineer" ? new Engineer(data.name, data.employee_ID, data.email_address, data.unique):
+        roll === "Intern" ? new Intern(data.name, data.employee_ID, data.email_address, data.unique):
         null 
-        );
+      );
       objects_array.push(new_Obj);
       inquirer.prompt({
         type: "list",
@@ -76,3 +76,20 @@ function compile_objects(run_type){
 
   }
     compile_objects("Start");
+
+/*
+fs.readFile('data.csv', 'utf8', (error, data) =>
+error ? console.error(error) : console.log(data)
+);*/
+
+/*
+fs.appendFile('log.txt', `${process.argv[2]}\n`, (err) =>
+  // Ternary operator takes in a condition followed by a question mark (?)
+  // then an expression to execute if the condition is truthy followed by a colon (:)
+  // and finally the expression to execute if the condition is falsy.
+  // This operator is frequently used as a shortcut for the if statement.
+  err ? console.error(err) : console.log('Commit logged!')*/
+/*
+fs.writeFile('readme.md', readme_string, (err) =>
+    err ? console.error(err) : console.log('Success!')
+);*/
