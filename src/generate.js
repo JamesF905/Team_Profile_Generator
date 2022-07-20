@@ -36,27 +36,27 @@ let images_path = `${path}/assets/images`; // set destination folder for the ima
 //copyFILES('src/index.html', `${path}/index.html`);
 copyFILES('src/assets/css/styles.css',`${css_path}/styles.css`);
 */
-
+const fs = require('fs');
 
 function generate(team){
-    let cardHTML;
+    let cardHTML = '';
     for(i=0; i<team.length; i++){
-        let roll = team[i].getRoll();
+        let roll = team[i].getRole();
         let memberID = team[i].getId();
         let memberName = team[i].getName();
         let memberEmail = team[i].getEmail();
         let unique;
 
-        roll === "Manager" ? unique = team[i].getOfficenumber():
+        roll === "Manager" ? unique = `Office Number: ${team[i].getOfficenumber()}`:
         roll === "Engineer" ? unique = `<a href="https://github.com/${team[i].getGithub()}`:
-        roll === "Intern" ? unique = team[i].getSchool():
+        roll === "Intern" ? unique = `School: ${team[i].getSchool()}`:
         null
 
         cardHTML += `
         <figure class="card">
             <div class="card_header">
                 <img class="icon" src="./assets/images/${roll.toLowerCase()}.png"/>
-                <h2 class="name">Jack<span class="title">(${memberName})</span></h2>                
+                <h2 class="name">${memberName}<span class="title">(${roll})</span></h2>                
             </div>
             <div class="card_body">
                 <ul>
@@ -89,7 +89,7 @@ function generate(team){
     </body>
     </html>`;
 
-    fs.writeFile('../dist/index.html', mainHTML, function(err) {
+    fs.writeFile('./dist/index.html', mainHTML, function(err) {
         if (err) console.error(err);
         console.log('Success! index.html created');
     });

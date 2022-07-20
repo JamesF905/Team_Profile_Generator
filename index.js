@@ -1,5 +1,4 @@
 const inquirer = require('inquirer');
-const fs = require('fs');
 const compileHTML = require('./src/generate');
 
 const Manager = require('./lib/Manager');
