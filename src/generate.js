@@ -41,7 +41,6 @@ copyFILES('src/assets/css/styles.css',`${css_path}/styles.css`);
 function generate(team){
     let cardHTML;
     for(i=0; i<team.length; i++){
-        forEach(myFunction);
         let roll = team[i].getRoll();
         let memberID = team[i].getId();
         let memberName = team[i].getName();
