@@ -36,7 +36,7 @@ function compile_objects(run_type){
         message: `What is ${grammah} name?`,
       },
       {
-        type: 'input',
+        type: 'number',
         name: 'employee_ID',
         message: `Please enter ${grammah} Employee ID.`,
       },

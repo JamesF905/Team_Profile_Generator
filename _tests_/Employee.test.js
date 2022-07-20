@@ -32,19 +32,19 @@ describe('Employee', () => {
         expect(throwCheck).toThrow();
     });
 
-    it ('Throw an error if "id" is an incorrect type', () => { // email wrong type
-      const throwCheck = () => new Employee('James', "1", 'james@gmail.com');
+    it ('Throw an error if "id" is an incorrect type', () => { 
+      const throwCheck = () => new Employee('James', 'yo', 'james@gmail.com');
 
       expect(throwCheck).toThrow();
     });
 
-    it ('Throw an error if "name" is an incorrect type', () => { // email wrong type
+    it ('Throw an error if "name" is an incorrect type', () => { 
       const throwCheck = () => new Employee(1, 1, 'james@gmail.com');
 
       expect(throwCheck).toThrow();
     });
 
-    it ('Throw an error if "email" is an incorrect type', () => { // email wrong type
+    it ('Throw an error if "email" is an incorrect type', () => { 
       const throwCheck = () => new Employee('James', 1, false);
 
       expect(throwCheck).toThrow();
