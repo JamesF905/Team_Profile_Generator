@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const compileHTML = require('./src/generate');
 
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
@@ -70,7 +71,7 @@ function compile_objects(run_type){
         if (menu.choice !== "Finish Building my Team") {
           compile_objects(menu.choice);
         }else{
-          console.log(objects_array);
+          compileHTML(objects_array);
 
           objects_array = [];
         }
