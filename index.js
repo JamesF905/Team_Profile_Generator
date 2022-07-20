@@ -59,6 +59,8 @@ function compile_objects(run_type){
         null 
       );
       objects_array.push(new_Obj);
+      
+
       inquirer.prompt({
         type: "list",
         name: "choice",
@@ -69,6 +71,7 @@ function compile_objects(run_type){
           compile_objects(menu.choice);
         }else{
           console.log(objects_array);
+
           objects_array = [];
         }
       })
