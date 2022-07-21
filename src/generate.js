@@ -48,7 +48,7 @@ function generate(team){
         let unique;
 
         roll === "Manager" ? unique = `Office Number: ${team[i].getOfficenumber()}`:
-        roll === "Engineer" ? unique = `<a href="https://github.com/${team[i].getGithub()}`:
+        roll === "Engineer" ? unique = `<a href="https:\/\/github.com\/${team[i].getGithub()}">https:\/\/github.com\/${team[i].getGithub()}</a>`:
         roll === "Intern" ? unique = `School: ${team[i].getSchool()}`:
         null
 

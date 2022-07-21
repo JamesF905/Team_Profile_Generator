@@ -14,8 +14,10 @@ function compile_objects(run_type){
     grammah = "your";
     roll = "Manager";
     unique_input = "Office Number";
+    unique_input_type = "number";
   }else{
     grammah = "their";
+    unique_input_type = "input";
     if(run_type === "Add an Engineer") {
       roll = "Engineer";
       unique_input = "GitHub Username";
@@ -46,7 +48,7 @@ function compile_objects(run_type){
         message: `Enter ${grammah} email address.`,
       },
       {
-        type: 'input',
+        type: `${unique_input_type}`,
         name: 'unique',
         message: `${unique_message}`,
       },         
