@@ -15,7 +15,7 @@
 ### Video Walkthrough Link
 
 <p align="center">
-    <a href="https://drive.google.com/file/d/1xe5Skd2xXaGKsBG44NHPMJ-8sfBz9IVe/view"><strong>https://drive.google.com/file/d/1xe5Skd2xXaGKsBG44NHPMJ-8sfBz9IVe/view</strong></a>
+    <a href="https://drive.google.com/file/d/1Xc7bpapBBUevOICDvVeGIKlDMrbStYk_/view"><strong>https://drive.google.com/file/d/1Xc7bpapBBUevOICDvVeGIKlDMrbStYk_/view</strong></a>
 </p>
 
 ### Repo Link
