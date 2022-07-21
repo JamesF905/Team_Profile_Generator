@@ -94,6 +94,7 @@ THEN I exit the application, and the HTML is generated
 * [node.js fs module](https://nodejs.dev/learn/the-nodejs-fs-module)
 * [npm inquirer](https://www.npmjs.com/package/inquirer)
 * [npm fs](https://www.npmjs.com/)
+* [npm jest](https://www.npmjs.com/jest)
 
 <p align="center"><a href="#contents">(back to top)</a></p>
 <br/><br/>
@@ -110,7 +111,9 @@ THEN I exit the application, and the HTML is generated
 
 5) type "npm i" in GitBash
 
-6) type "node index.js" in GitBash to start the application
+6) type "node index.js" in GitBash to start the application and fill out the form, an index.html file will be generated and stored in the "dist/" folder
+
+7) type "npm run test" to run the jest test suites
 
 <p align="center"><a href="#contents">(back to top)</a></p>
 <br/><br/>
